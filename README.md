@@ -11,11 +11,14 @@
 [![CI](https://img.shields.io/badge/CI-lint%20·%20test%20·%20build-0f9d58?style=flat-square)](.github/workflows/ci.yml)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-7c3aed?style=flat-square)](CONTRIBUTING.md)
 [![Made in Bangladesh](https://img.shields.io/badge/Made%20in-%F0%9F%87%A7%F0%9F%87%A9%20Bangladesh-006a4e?style=flat-square)](https://github.com/tbahsan)
+[![Issues](https://img.shields.io/badge/🐛%20Found%20a%20bug-Open%20an%20issue-ff0033?style=flat-square)](../../issues/new?template=bug_report.yml)
+[![Ideas](https://img.shields.io/badge/💡%20Have%20an%20idea-Request%20a%20feature-7c3aed?style=flat-square)](../../issues/new?template=feature_request.yml)
 
 **[🌐 Landing Page](https://tbahsan.github.io/t-manager/)** ·
 **[⬇️ Download](https://github.com/tbahsan/T-Manager/releases/latest)** ·
 **[বাংলা README](README-BN.md)** ·
-**[Report Bug](../../issues)**
+**[🐛 Report a Bug](../../issues/new?template=bug_report.yml)** ·
+**[💡 Suggest a Feature](../../issues/new?template=feature_request.yml)**
 
 </div>
 
@@ -62,6 +65,18 @@ Google gives every API project **10,000 units/day** — T-Manager spends them wi
 | Video upload | `1,600u`/video | hard gate + resume-tomorrow queue |
 
 Heavy user? **Pro mode** → paste your own OAuth client ID and enjoy your own daily quota. Guide: [docs/QUOTA.md](docs/QUOTA.md).
+
+## 🐛💡 Feedback & Community
+
+T-Manager grows from **your** real-world workflows — please speak up:
+
+| | | |
+|---|---|---|
+| 🐛 **Found a bug?** | → **[Open a bug report](../../issues/new?template=bug_report.yml)** | Structured form (area/browser/steps) — the fastest path to a fix |
+| 💡 **Feature idea?** | → **[Request a feature](../../issues/new?template=feature_request.yml)** | Tell us your use-case — the best ideas join the roadmap |
+| ❓ **Question?** | → **[Discussions](../../discussions)** | "How does X work?" belongs here |
+
+> 💬 Every "you requested, we shipped" starts with an issue. Browse [open issues](../../issues) and drop a 👍 on the ones you want most — reactions drive the priority.
 
 ## 🗺️ Roadmap
 

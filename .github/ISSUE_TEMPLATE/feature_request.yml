@@ -1,0 +1,54 @@
+name: 💡 Feature request
+description: Suggest an idea that would make T-Manager more useful.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Idea welcome!** The best features come from creators using the tool daily.
+        Tip: check the [Roadmap](https://github.com/tbahsan/T-Manager#-roadmap) in the README first — maybe it's already planned.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area is this about?
+      options:
+        - Rename / numbering
+        - Thumbnails (incl. Shorts 9:16 builder)
+        - Description
+        - Tags
+        - Upload queue
+        - Analytics
+        - Multi-channel
+        - Undo / history
+        - Quota
+        - UI / languages
+        - New feature area
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Your problem / use case
+      description: Describe the workflow that frustrates you today — the *problem*, not the solution.
+      placeholder: "Every week I have to… and it takes forever because…"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Your idea
+      description: How would you solve it? Mockups/screenshots welcome.
+    validations:
+      required: true
+  - type: dropdown
+    id: willingness
+    attributes:
+      label: Would you help test it?
+      options:
+        - "Yes — I can test builds"
+        - Maybe
+        - "No — just suggesting"
+    validations:
+      required: false

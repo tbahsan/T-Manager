@@ -9,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-ff0033?style=flat-square)](LICENSE)
 [![Made in Bangladesh](https://img.shields.io/badge/Made%20in-%F0%9F%87%A7%F0%9F%87%A9%20Bangladesh-006a4e?style=flat-square)](https://github.com/tbahsan)
 
-**[🌐 ওয়েবসাইট](https://tbahsan.github.io/t-manager/)** · **[⬇️ ডাউনলোড](https://github.com/tbahsan/T-Manager/releases/latest)** · **[English](README.md)**
+**[🌐 ওয়েবসাইট](https://tbahsan.github.io/t-manager/)** · **[⬇️ ডাউনলোড](https://github.com/tbahsan/T-Manager/releases/latest)** · **[🐛 বাগ জানান](../../issues/new?template=bug_report.yml)** · **[💡 ফিচার চান](../../issues/new?template=feature_request.yml)** · **[English](README.md)**
 
 </div>
 
@@ -54,6 +54,18 @@ Google প্রতি প্রজেক্টে দেয় **১০,০০�
 | আপলোড | `১,৬০০u`/ভিডিও | hard gate + "কাল resume" |
 
 বেশি ব্যবহার করেন? **Pro mode**-এ নিজের client ID দিন — নিজের কোটা। গাইড: [docs/QUOTA.md](docs/QUOTA.md)
+
+## 🐛💡 মতামত ও পরামর্শ
+
+T-Manager আপনাদের বাস্তব কাজের অভিজ্ঞতা থেকেই এগিয়ে যাক:
+
+| | |
+|---|---|
+| 🐛 **কোনো বাগ পেয়েছেন?** | **[বাগ রিপোর্ট খুলুন](../../issues/new?template=bug_report.yml)** — কোন এলাকা, কোন ব্রাউজার, কী ধাপে হলো লিখলে দ্রুত ঠিক হয় |
+| 💡 **নতুন ফিচারের আইডিয়া?** | **[ফিচার রিকোয়েস্ট করুন](../../issues/new?template=feature_request.yml)** — আপনার সমস্যাটা বলুন; সেরা আইডিয়া roadmap-এ যোগ হয় |
+| ❓ **প্রশ্ন?** | **[Discussions](../../discussions)**-এ করুন |
+
+> 💬 প্রতিটা "আপনিই চেয়েছিলেন, আমরা বানিয়েছি"-র শুরু একটা issue দিয়ে।
 
 ## 🧑‍💻 ডেভেলপার
 

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: ❓ Question or support
+    url: https://github.com/tbahsan/T-Manager/discussions
+    about: Ask how something works — also check the FAQ on the landing page first.
+  - name: 📖 Documentation & guides
+    url: https://github.com/tbahsan/T-Manager#readme
+    about: Quota guide, architecture, release docs.
