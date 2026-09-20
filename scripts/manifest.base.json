@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "T-Manager \u2014 YouTube Channel Manager",
+  "short_name": "T-Manager",
+  "version": "0.1.0",
+  "author": "Tasneem Bin Ahsan (TBA) \u2014 github.com/tbahsan",
+  "description": "Batch title/numbering, thumbnails, descriptions & tags + upload queue, analytics and multi-channel switching for YouTube \u2014 by TBA (github.com/tbahsan)",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "T-Manager \u2014 by TBA",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "identity",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://www.googleapis.com/*"
+  ],
+  "minimum_chrome_version": "115",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz8xhEqLAmjI9MN2uKMrWdom0x8pNRg88hyIy5PKfsSILkhbrQgBvlWNmSLVpYfEdQsnYwlq7zCAPIFjE7ygBghzJwheBm2aFHdAU3diCiFX4y9s75SKk2WIjXeVjr6L+GnYAxBMQXE+XcPbgxWynFlrrQd5vMuDTy3C4S0071insqjIddJiy6zceiDjd9n7JzyZWauMoeLryWuv1FJVXD0+Ibxdj6wugoBWU10pKvcKDHoYMDACwt2sn08iwGM+XaPjxrEDeU7L3mEWwDNWKD2fls1Mh7l/5Y1wD8Q5+y9W4QAoicilzg8WJyHMuJXJ/Akswid1yqs67FxSl7C6FuQIDAQAB"
+}

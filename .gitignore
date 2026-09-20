@@ -1,0 +1,11 @@
+# deps & build output
+node_modules/
+dist/
+*.zip
+# caches & logs
+.cache/
+coverage/
+*.log
+# OS
+.DS_Store
+Thumbs.db
