@@ -1,58 +1,112 @@
 <div align="center">
 
-<img src="src/icons/icon128.png" width="96" alt="T-Manager logo" />
+<img src="docs/assets/banner.png" alt="T-Manager — The YouTube Channel Manager" width="100%"/>
 
-# T-Manager — YouTube Channel Manager
+# T-Manager
 
-**Batch title/numbering · thumbnails · descriptions · tags · upload queue · analytics · multi-channel — one extension for Chrome, Firefox & Firefox for Android.**
+**Batch rename with Bangla numbering · thumbnails · descriptions & tags · resumable uploads · analytics with revenue · multi-channel — for Chrome, Firefox & Firefox for Android.**
 
-> 🛠️ Made with ❤️ by [**Tasneem Bin Ahsan (TBA)**](https://github.com/tbahsan) — Bangladesh · [@tbahsan](https://x.com/tbahsan) · [@TBAhsan](https://www.youtube.com/@TBAhsan) · [tlogz.com](https://tlogz.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-ff0033?style=flat-square)](LICENSE)
+[![Version](https://img.shields.io/badge/version-0.1.0--dev-blue?style=flat-square)](CHANGELOG.md)
+[![CI](https://img.shields.io/badge/CI-lint%20·%20test%20·%20build-0f9d58?style=flat-square)](.github/workflows/ci.yml)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-7c3aed?style=flat-square)](CONTRIBUTING.md)
+[![Made in Bangladesh](https://img.shields.io/badge/Made%20in-%F0%9F%87%A7%F0%9F%87%A9%20Bangladesh-006a4e?style=flat-square)](https://github.com/tbahsan)
 
-`browser-extension` `youtube` `developer-tools` `manifest-v3` `bangla`
+**[🌐 Landing Page](https://tbahsan.github.io/t-manager/)** ·
+**[⬇️ Download](https://github.com/tbahsan/T-Manager/releases/latest)** ·
+**[বাংলা README](README-BN.md)** ·
+**[Report Bug](../../issues)**
 
 </div>
 
 ---
 
-## Why T-Manager?
-Renaming 100 videos, re-tagging a series, or uploading a batch on YouTube means clicking one video at a time. T-Manager does it in **one pass — with a preview, a quota cost estimate, and full undo**.
+## 🤔 Why?
 
-- ✏️ **Batch rename** — 4 modes incl. *prepend* (number beside the original title) · Bangla digits: `শর্ট-১`, `লং-২`
-- 🖼️ **Batch thumbnails** — one image for all, per-video mapping, **Shorts 9:16 builder**
-- 📝 **Batch description & 🏷️ tags** — replace / append / prepend · merge = one API call (50u, not 150u)
-- ⬆️ **Upload queue** — resumable 5 MB chunks; survives network cuts & browser restarts
-- 📊 **Analytics dashboard** — views, watch time, CTR, **revenue (RPM)** · 6h cache
-- 👥 **Multi-channel** — connect several channels, switch in one click, fully separated data
-- ⚡ **Quota tracker** — every action shows its API-unit cost *before* you run it
-- ↩️ **Undo everything** (except delete — that one is triple-gated instead)
+Renaming 100 videos, re-tagging a series, or uploading a batch on YouTube means clicking **one video at a time**. T-Manager does it in **one pass** — with a preview, a quota cost estimate, and full undo. Built **readability-first**: every file documented so any developer can jump in.
 
-## Status
-🚧 **v0.1.0 — M0 skeleton** (plan milestones M0–M12 → release ≈ mid-Dec 2026). The architecture, build, tests and message protocol are live; features land week by week.
+## ✨ Features
 
-## Dev quickstart
+| | Feature | What it does |
+|---|---|---|
+| ✏️ | **Batch rename + numbering** | 4 modes — *Replace*, *Prepend (keep original)* ⭐, *Append*, *Custom template* · per-kind prefixes: `শর্ট-১`, `লং-২` · Bangla **or** English digits · zero-pad · start/step · custom text before & after the number |
+| 🖼️ | **Batch thumbnails** | One image → all selected, or per-video mapping · client-side validation · side-by-side preview · *(Shorts 9:16 builder — coming)* |
+| 📝 | **Batch descriptions** | Replace / **Append** ⭐ / Prepend · `{existing}` & `{date}` placeholders |
+| 🏷️ | **Batch tags** | Merge (dupe-safe) ⭐ / Replace / Remove · live 500-character guard |
+| ⬆️ | **Upload queue** | Multi-file → auto-numbered titles · **resumable 5 MB chunks** survive network cuts · mandatory privacy & made-for-kids pre-flight |
+| 📊 | **Analytics dashboard** | Views, watch time, subscribers, impressions/CTR · **revenue + RPM card** for monetized channels · 6h cache |
+| 👥 | **Multi-channel** | Connect several channels, switch in one click — cache/history/quota fully separated |
+| ⚡ | **Quota tracker** | Shows the API-unit cost of every batch **before** running + daily usage bar |
+| ↩️ | **Undo everything** | Every batch snapshots before writing — one-click restore · *(delete is triple-gated instead — Google's API can't undo it)* |
+| 🌐 | **English + বাংলা** | English-first UI, one-click Bangla switch |
+
+## 📦 Install (2 minutes — no build tools)
+
+> Full guide with screenshots: **[Landing Page](https://tbahsan.github.io/t-manager/)**
+
+1. **Download** [`t-manager-chrome.zip`](https://github.com/tbahsan/T-Manager/releases/latest/download/t-manager-chrome.zip) or [`t-manager-firefox.zip`](https://github.com/tbahsan/T-Manager/releases/latest/download/t-manager-firefox.zip) → unzip
+2. **Chrome:** open `chrome://extensions` → enable *Developer mode* → **Load unpacked** → select the folder
+   **Firefox:** open `about:debugging#/runtime/this-firefox` → **Load Temporary Add-on…** → `manifest.json`
+3. Popup → **Connect YouTube** → done ✅
+
+## ⚡ The honest quota math
+
+Google gives every API project **10,000 units/day** — T-Manager spends them wisely and tells you the price *before* you run anything:
+
+| Action | Cost | Note |
+|---|---|---|
+| List videos (×50) | `1u` | cached → previews & undo cost **0** |
+| Rename + description + tags | `50u`/video | **merged into ONE call** — not 150 |
+| Thumbnail replace | `50u`/video | |
+| Analytics query | `≈1u` | separate quota pool + 6h cache |
+| Video upload | `1,600u`/video | hard gate + resume-tomorrow queue |
+
+Heavy user? **Pro mode** → paste your own OAuth client ID and enjoy your own daily quota. Guide: [docs/QUOTA.md](docs/QUOTA.md).
+
+## 🗺️ Roadmap
+
+- [x] M0 — skeleton, build, CI, logo
+- [x] Core — auth + multi-channel, batch rename/desc/tags/thumbnails, upload queue, analytics, undo
+- [x] UI guide pass — inline instructions, universal number style
+- [ ] TH3 — Shorts 9:16 thumbnail builder
+- [ ] Store listings — Chrome Web Store + Firefox AMO (incl. Android)
+- [ ] v1.0 — polish, verification, launch 🚀
+
+Have an idea? → [open an issue](../../issues/new?template=feature.yml)
+
+## 🧑‍💻 Dev quickstart
+
 ```bash
-git clone https://github.com/tbahsan/t-manager && cd t-manager
+git clone https://github.com/tbahsan/T-Manager && cd T-Manager
 npm install
 npm run build     # → dist/chrome + dist/firefox (load unpacked)
-npm test          # vitest
+npm test          # vitest — 17 tests
 npm run lint      # eslint
 ```
 
-## Install from zip (no build tools)
-1. Download `t-manager-chrome.zip` / `t-manager-firefox.zip` from the [latest release](https://github.com/tbahsan/t-manager/releases/latest) and unzip.
-2. Chrome: `chrome://extensions` → Developer mode → **Load unpacked** → select the folder.
-3. Firefox: `about:debugging#/runtime/this-firefox` → **Load Temporary Add-on…** → `manifest.json`.
+**Readability is a feature** — every file has a header block + JSDoc ([convention](CONTRIBUTING.md)). Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) · Releases: [docs/RELEASE.md](docs/RELEASE.md)
 
-Landing page: **https://tbahsan.github.io/t-manager/** (source: `docs/index.html` — deployed via GitHub Pages).
+## 🤝 Contributing
 
-## Releasing
-See [docs/RELEASE.md](docs/RELEASE.md) — Pages deploy + tagged release with stable download URLs (`releases/latest/download/t-manager-<browser>.zip`).
+PRs welcome! Read [CONTRIBUTING.md](CONTRIBUTING.md) — the one rule: *a new developer must understand any file in minutes, from its comments.*
 
-## Quota honesty
-YouTube gives **10,000 API units/day per project** (an upload costs 1,600). T-Manager shows the cost of every batch before running and never hides this. [docs/QUOTA.md](docs/QUOTA.md) explains how to use **your own** client ID (Pro mode) for your own quota.
+## 👤 Author
 
-## Contributing
-PRs welcome — but **readability is a feature**: every file has a header block, every exported function has JSDoc. See [CONTRIBUTING.md](CONTRIBUTING.md).
+<div align="center">
 
-## License
-[MIT](LICENSE) · © 2026 **Tasneem Bin Ahsan (TBA)**. Not affiliated with YouTube/Google. Logo is YouTube-*inspired*, not a copy.
+**Tasneem Bin Ahsan (TBA)** — Web Designer & Developer from 🇧🇩 Bangladesh
+
+[![GitHub](https://img.shields.io/badge/GitHub-tbahsan-181717?style=flat-square&logo=github)](https://github.com/tbahsan)
+[![X](https://img.shields.io/badge/X-@tbahsan-000000?style=flat-square&logo=x)](https://x.com/tbahsan)
+[![YouTube](https://img.shields.io/badge/YouTube-@TBAhsan-ff0000?style=flat-square&logo=youtube)](https://www.youtube.com/@TBAhsan)
+[![Blog](https://img.shields.io/badge/Blog-tlogz.com-4a8cff?style=flat-square)](https://tlogz.com/)
+
+</div>
+
+## ⚖️ License
+
+[MIT](LICENSE) · © 2026 Tasneem Bin Ahsan (TBA) · T-Manager is an independent tool — **not affiliated with or endorsed by YouTube or Google**. Logo is YouTube-*inspired*, not a copy.
+
+<div align="center">
+<sub>Made with ❤️ in Bangladesh — if T-Manager saves you time, please ⭐ the repo!</sub>
+</div>
