@@ -32,7 +32,7 @@ Renaming 100 videos, re-tagging a series, or uploading a batch on YouTube means 
 
 | | Feature | What it does |
 |---|---|---|
-| ✏️ | **Batch rename + numbering** | 4 modes — *Replace*, *Prepend (keep original)* ⭐, *Append*, *Custom template* · per-kind prefixes: `শর্ট-১`, `লং-২` · Bangla **or** English digits · zero-pad · start/step · custom text before & after the number |
+| ✏️ | **Batch rename + numbering** | 4 modes — *Replace*, *Prepend (keep original)* ⭐, *Append*, *Custom template* · per-kind prefixes: `short-1`, `long-2` · Bangla **or** English digits · zero-pad · start/step · custom text before & after the number |
 | 🖼️ | **Batch thumbnails** | One image → all selected, or per-video mapping · client-side validation · side-by-side preview · *(Shorts 9:16 builder — coming)* |
 | 📝 | **Batch descriptions** | Replace / **Append** ⭐ / Prepend · `{existing}` & `{date}` placeholders |
 | 🏷️ | **Batch tags** | Merge (dupe-safe) ⭐ / Replace / Remove · live 500-character guard |
