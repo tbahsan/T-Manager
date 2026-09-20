@@ -14,7 +14,7 @@
 [![Issues](https://img.shields.io/badge/🐛%20Found%20a%20bug-Open%20an%20issue-ff0033?style=flat-square)](../../issues/new?template=bug_report.yml)
 [![Ideas](https://img.shields.io/badge/💡%20Have%20an%20idea-Request%20a%20feature-7c3aed?style=flat-square)](../../issues/new?template=feature_request.yml)
 
-**[🌐 Landing Page](https://tbahsan.github.io/t-manager/)** ·
+**[🌐 Landing Page](https://tbahsan.github.io/T-Manager/)** ·
 **[⬇️ Download](https://github.com/tbahsan/T-Manager/releases/latest)** ·
 **[বাংলা README](README-BN.md)** ·
 **[🐛 Report a Bug](../../issues/new?template=bug_report.yml)** ·
